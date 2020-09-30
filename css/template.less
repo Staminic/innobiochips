@@ -227,6 +227,95 @@ legend {
   position: static;
 }
 
+.text-orange {
+  color: @orange;
+}
+
+.download-block {
+  padding: 30px;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.75em;
+  }
+
+  li {
+    margin-bottom: 1.5rem;
+  }
+
+  &.covidiag {
+    padding: 0;
+    background-color: #ecf1f4;
+    color: @greyblue;
+
+    a {
+      color: @greyblue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      span {
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+    }
+
+    .col {
+      &:first-child {
+        padding: 30px;
+      }
+
+      @media (min-width: @screen-sm-min) {
+        width: 50%;
+
+        & + .col {
+          align-self: stretch;
+          background-image: url(../images/covidiag-sample-sheet.jpg);
+          background-repeat: no-repeat;
+          background-position: center right;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+.form-block {
+  padding: 30px;
+
+  &.covidiag {
+    background-color: #5d6c72;
+    color: #ffffff;
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .flex {
+      justify-content: center;
+    }
+
+    .convertforms {
+      label {
+        font-weight: 400;
+
+        .cf-required-label {
+          color: #ffffff;
+        }
+      }
+
+      &.cf-success {
+        .cf-response {
+          background-color: #f5c800;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
 //=======================================================================
 // LAYOUT
 //=======================================================================
