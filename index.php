@@ -60,10 +60,10 @@ include_once JPATH_THEMES.'/'.$this->template.'/inc/logic.php';
           <div class="col-xs-12">
           <?php endif; ?>
           <jdoc:include type="modules" name="breadcrumbs" />
+            <jdoc:include type="message" />
           <?php if ($this->countModules('above')) : ?>
             <jdoc:include type="modules" name="above" />
           <?php endif; ?>
-            <jdoc:include type="message" />
             <jdoc:include type="component" />
           <?php if ($this->countModules('below')) : ?>
             <jdoc:include type="modules" name="below" />

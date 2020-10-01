@@ -233,6 +233,7 @@ legend {
 
 .download-block {
   padding: 30px;
+
   h2 {
     margin-top: 0;
     margin-bottom: 0.75em;
@@ -316,6 +317,132 @@ legend {
   }
 }
 
+.ad-block {
+  padding: 30px;
+  background-image: url(../images/ad-block-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.75em;
+  }
+
+  &.covidiag {
+    color: #ffffff;
+
+    .flex {
+      flex-direction: column;
+
+      @media (min-width: @screen-md-min) {
+        flex-direction: row;
+      }
+    }
+
+    .col {
+      padding: 10px;
+    }
+
+    @media (min-width: @screen-md-min) {
+      .col:nth-child(1) {
+        padding-right: 15px;
+      }
+
+      .col:nth-child(2) {
+        padding-left: 15px;
+      }
+    }
+
+    .picture {
+      padding: 15px 15px 30px;
+      margin-bottom: 15px;
+      background-color: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn {
+      padding-right: 20px;
+      padding-left: 20px;
+      background-color: @yellow;
+      color: #000000;
+      border: none;
+      border-radius: 25px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.front {
+  .ad-block {
+    &.covidiag {
+      margin-bottom: 45px;
+
+      @media (min-width: @screen-md-min) {
+        .h1 {
+          font-size: 42px;
+        }
+
+        .h3 {
+          font-size: 32px;
+        }
+      }
+
+      .flex {
+        @media (min-width: @screen-sm-min) {
+          flex-direction: row;
+        }
+      }
+
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+
+      @media (min-width: @screen-sm-min) {
+        .col:nth-child(1) {
+          width: 50%;
+        }
+
+        .col:nth-child(2) {
+          width: 50%;
+        }
+      }
+
+      .picture {
+        margin: 0;
+
+        img {
+          max-height: 280px;
+          margin: 0 auto;
+        }
+      }
+
+      .btn {
+        font-weight: 700;
+        text-transform: none;
+      }
+    }
+  }
+}
+
+.uk-slideshow {
+  [data-slideshow-slide] {
+    .btn {
+      padding-right: 20px;
+      padding-left: 20px;
+      background-color: #e1e7e9;
+      color: @body-text;
+      border: none;
+      border-radius: 25px;
+      text-transform: uppercase;
+    }
+  }
+}
+
 //=======================================================================
 // LAYOUT
 //=======================================================================
@@ -334,7 +461,8 @@ legend {
 }
 
 .front #main-content {
-  padding-top: 45px;
+  // padding-top: 45px;
+  padding-top: 0;
   padding-bottom: 45px;
 }
 
